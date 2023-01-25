@@ -16,11 +16,23 @@ class ReportState extends State<Report> {
   late List<ReportModal> data;
   Future<Map<String, int>>? future;
   late TooltipBehavior _tooltipBehavior;
-  String myMonth = '11';
-  String myYear = '2022';
+
+  String date = DateTime.now().toString();
+
+  late String myMonth;
+  late String myYear;
+
+  getCurrentDate(){
+    var dateParse = DateTime.parse(date);
+    myMonth = dateParse.month.toString();
+    myYear = dateParse.year.toString();
+  }
+
+
 
   @override
   void initState() {
+    getCurrentDate();
     future = NetworkApi.getReport(myMonth, myYear);
     _tooltipBehavior = TooltipBehavior(enable: true);
     super.initState();

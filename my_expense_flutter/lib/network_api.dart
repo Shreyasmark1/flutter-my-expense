@@ -7,7 +7,7 @@ import 'UpdateModal.dart';
 import 'package:http/http.dart' as http;
 
 class NetworkApi {
-  static String baseUrl = 'http://192.168.1.6:8084/android/';
+  static String baseUrl = 'http://192.168.29.40:8084/android/';
   static String? cookie;
 
   //************************************************login******************************************************

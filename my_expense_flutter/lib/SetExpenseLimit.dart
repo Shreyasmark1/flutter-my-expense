@@ -212,7 +212,7 @@ class ExpenseLimitState extends State<ExpenseLimit> {
                       ? const SizedBox(
                           height: 30,
                           width: 10,
-                          child: Text('hi'),
+                          child: Text(''),
                         )
                       : response(),
                 ),
